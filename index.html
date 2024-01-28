@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT PHOTO SLIDER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="butonlar m-auto mt-4 flex flex-row justify-center items-center">
+    <img id="leftarrow" class="arrow rotate-90" src="images/leftarrow.png" onclick="toleft()">
+    <img id="rightarrow" class="arrow rotate-90" src="images/rightarrow.png" onclick="toright()">
+</div>
+    
+<div class="container">
+    <img id="carimg">
+</div>
+
+
+<script>
+
+let cars = ["car1.jpg", "car2.jpg", "car3.jpg","car4.jpg","car5.jpg"]
+let i = 0;
+let carimg = document.getElementById("carimg");
+carimg.src = "images/" + cars[i] ;
+let container = document.getElementById("container");
+let leftarrow = document.getElementById("leftarrow");
+let rightarrow = document.getElementById("rightarrow");
+
+function toleft() {
+
+i = i - 1;
+
+if ( i < 0 ) {
+    i = 4 ;
+}
+
+carimg.src = "images/" + cars[i];
+
+let container = document.getElementById("container");
+
+container.appendChild(newImage);
+
+}
+
+function toright() {
+
+i = i + 1;
+
+if ( i > 4 ) {
+    i = 0;
+}
+
+carimg.src = "images/" + cars[i];
+
+let container = document.getElementById("container");
+
+container.appendChild(newImage);
+
+}
+
+</script>
+
+</body>
+</html>

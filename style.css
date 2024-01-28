@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    background-color: lightgrey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.arrow {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    transition: 300ms ease;
+    transform: scale(1.1);
+}
+
+.arrow:active {
+    transform: scale(0.9);
+}
+
+div.container {
+    margin: auto;
+    margin-top: 20px;
+    height:450px;
+    width:800px;
+    box-shadow: 0 0 10px black;
+}
+
+div.container > img {
+    height: 100%;
+    width: 100%;
+}
